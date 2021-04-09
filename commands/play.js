@@ -180,8 +180,6 @@ module.exports = {
         } catch (error) {
             console.error(`I could not join the voice channel: ${error}`);
             message.client.queue.delete(message.guild.id);
-            await channel.leave();
-            return sendError(`I could not join the voice channel: ${error}`, message.channel);
         }
     },
 };
