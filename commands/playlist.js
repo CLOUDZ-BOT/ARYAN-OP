@@ -35,8 +35,8 @@ module.exports = {
                 }
                 return message.channel.send({
                     embed: {
-                        color: "GREEN",
-                        description: `✅  **|**  Playlist: **\`${videos[0].title}\`** has been added to the queue`,
+                        color: "#ff0000",
+                        description: `Playlist: **\`${videos[0].title}\`** has been added to the queue`,
                     },
                 });
             } catch (error) {
@@ -59,8 +59,8 @@ module.exports = {
                 let thing = new MessageEmbed()
                     .setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
                     .setThumbnail(songInfo.thumbnail)
-                    .setColor("GREEN")
-                    .setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`);
+                    .setColor("#ff0000")
+                    .setDescription(`Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`);
                 return message.channel.send(thing);
             } catch (error) {
                 return sendError("An unexpected error has occurred", message.channel).catch(console.error);
@@ -107,7 +107,7 @@ module.exports = {
                 let thing = new MessageEmbed()
                     .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
                     .setThumbnail(song.img)
-                    .setColor("YELLOW")
+                    .setColor("#ff0000")
                     .addField("Name", song.title, true)
                     .addField("Duration", song.duration, true)
                     .addField("Requested by", song.req.tag, true)
@@ -121,11 +121,11 @@ module.exports = {
             const serverQueue = message.client.queue.get(message.guild.id);
             if (!song) {
                 sendError(
-                    "Leaving the voice channel because I think there are no songs in the queue. If you like the bot stay 24/7 in voice channel go to `commands/play.js` and remove the line number 61\n\nThank you for using my code! [GitHub](https://github.com/SudhanPlayz/Discord-MusicBot)",
+                    "Leaving the voice channel because I think there are no songs in the queue use `+play <song_name> to play a song",
                     message.channel
                 );
-                message.guild.me.voice.channel.leave(); //If you want your bot stay in vc 24/7 remove this line :D
-                message.client.queue.delete(message.guild.id);
+     
+        message.client.queue.delete(message.guild.id);
                 return;
             }
             let stream;
@@ -172,7 +172,7 @@ module.exports = {
             let thing = new MessageEmbed()
                 .setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
                 .setThumbnail(song.img)
-                .setColor("BLUE")
+                .setColor("#ff0000")
                 .addField("Name", song.title, true)
                 .addField("Duration", song.duration, true)
                 .addField("Requested by", song.req.tag, true)
