@@ -5,7 +5,7 @@ module.exports = {
         name: "join",
         description: "Enables/Disables 24/7 of the bot in the server",
         usage: "",
-        aliases: ["j", "24/7"]
+        aliases: ["j", "come"]
     },
 
     run: async function(client, message, args){
