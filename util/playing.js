@@ -9,7 +9,7 @@ module.exports = {
         const queue = message.client.queue.get(message.guild.id);
         if (!song) {
             sendError(
-                "My queue list is now empty!",
+                "My queue list is now empty! to play a song type `+help <song_name>`",
                 message.channel
             );
 
