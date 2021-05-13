@@ -31,7 +31,7 @@ module.exports = {
 
         const joinembed = new MessageEmbed()
 
-        .setDescription(`<a:astroz_success:839478588192718898> SUCCESSFULLY JOINED THE VOICE CHANNEL. `)
+        .setDescription(`<a:astroz_success:839478588192718898> Sucessfully joined the **Voice Channel**. `)
         .setColor("#ff0000")
     
         message.channel.send(joinembed);
