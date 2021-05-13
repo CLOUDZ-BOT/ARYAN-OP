@@ -41,7 +41,7 @@ module.exports = {
             .addField("<:users:839478590591729696> Users:", `\`\`\`${sum}\`\`\``, true)
             .addField("<a:uptime:839478595734601739> Uptime:", `${uptime}`)
             .addField("<:ram:839478592064323594> Ram:", `\`\`\`${ram}MB\`\`\``)
-            .addField("<a:BOT:839493686269182009> Bot Developers:", `THE丶JUИGLΣΣ丶SHIVAMᵀˣ#5290,」𝐙𝐆𝐎𝐃#7663`)
+            .addField("<a:BOT:839493686269182009> Bot Developers:", `THE丶JUИGLΣΣ丶SHIVAMᵀˣ#5290,」𝐙𝐆𝐎𝐃#7663,ℓєσ#6666`)
 						.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
             .setTimestamp();
 
