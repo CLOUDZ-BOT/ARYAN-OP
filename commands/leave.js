@@ -20,7 +20,7 @@ module.exports = {
         .setColor("#FF0000");
 
         const dcembed = new MessageEmbed()
-        .setDescription(":astroz_correct: 24/7 mode is now **Disabled** in this server.")
+        .setDescription("<a:astroz_success:839478588192718898> 24/7 mode is now **Disabled** in this server.")
         .setColor("#FF0000")
 
         
@@ -34,7 +34,7 @@ module.exports = {
 
             message.member.voice.channel.leave();
             message.channel.send(dcembed)       
-        return message.react(":astroz_correct:");
+        return message.react("<a:astroz_success:839478588192718898>");
            
         }
     }
