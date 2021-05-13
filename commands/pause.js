@@ -21,7 +21,7 @@ module.exports = {
       }	    
       let xd = new MessageEmbed()
       .setDescription("⏸ Paused the music for you!")
-      .setColor("YELLOW")
+      .setColor("#6500ff")
       .setTitle("Music has been paused!")
       return message.channel.send(xd);
     }
