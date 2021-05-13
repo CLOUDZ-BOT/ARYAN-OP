@@ -15,7 +15,7 @@ module.exports = {
             serverQueue.loop = !serverQueue.loop;
             return message.channel.send({
                 embed: {
-                    color: "GREEN",
+                    color: "#ff0000",
                     description: `🔁  **|**  Loop is **\`${serverQueue.loop === true ? "enabled" : "disabled"}\`**`
                 }
             });
