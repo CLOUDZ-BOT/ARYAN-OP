@@ -25,8 +25,8 @@ module.exports = {
             .setTimestamp()
                     
         message.client.channels.cache.get(fbChannel).send(embed).then((msg) =>{
-            msg.react(':astroz_correct:');
-            msg.react(':astroz_wrong:');
+            msg.react('<a:astroz_success:839478588192718898>');
+            msg.react('<a:astroz_error:839478585642713138>');
         }).catch((err)=>{
             throw err;
         });
