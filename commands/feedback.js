@@ -1,5 +1,5 @@
 const {MessageEmbed} = require('discord.js')
-const { EMOJI_DONE , BOT_ID , CHECK_DM , EMBED_COLOR } = require('../config.json');
+
 module.exports = {
     name: "feedback",
     aliases: ["fb"],
@@ -7,7 +7,7 @@ module.exports = {
     description: "submit a feedback",
     async execute(message, args) {
 
-        const fbChannel = "822580249728122891";
+        const fbChannel = "839478605209010207";
 
         const fb = args.join(" ");
         if(!fb){
@@ -15,13 +15,13 @@ module.exports = {
         }
 
         const embed = new MessageEmbed()
-            .setTitle("Astroz Music Feedback :astroz_correct:")
+            .setTitle("Cloudz Music Feedback <a:astroz_success:839478588192718898>")
             .addField(`Author`, `\`${message.author.tag}\``)
             .addField(`Feedback`, "\`"+fb+"\`")
             .addField(`Member Id`, `\`${message.author.id}\``)
             .addField(`On the Server`, `\`${message.guild.name}\``)
             .addField("Server ID:", `\`${message.guild.id}\``)
-            .setColor(EMBED_COLOR)
+            .setColor("#ff0000")
             .setTimestamp()
                     
         message.client.channels.cache.get(fbChannel).send(embed).then((msg) =>{
@@ -33,11 +33,11 @@ module.exports = {
 
 
         const successembed = new MessageEmbed()
-        .addField("Join Our Support Server", `Click Here To Join Our [Support Server](https://discord.gg/m7W2t3bsZj)`)
+        .addField("Join Our Support Server", `Click Here To Join Our [Support Server](https://discord.gg/Arqg9kc8r5)`)
         .setTitle("Success!")
-        .setColor(EMBED_COLOR)
-        .setDescription(`${EMOJI_DONE} Your **Feedback** is submitted successfully!`)
-        message.react(EMOJI_DONE);
+        .setColor("#ff0000")
+        .setDescription(`<a:astroz_success:839478588192718898> Your **Feedback** is submitted successfully!`)
+        message.react("<a:astroz_success:839478588192718898>");
 
         message.author.send(successembed)
     }
