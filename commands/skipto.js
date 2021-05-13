@@ -37,7 +37,6 @@ module.exports = {
      try{
     queue.connection.dispatcher.end();
       }catch (error) {
-        queue.voiceChannel.leave()
         message.client.queue.delete(message.guild.id);
        return sendError(`:notes: The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }
