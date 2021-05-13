@@ -40,7 +40,7 @@ client.on("message", async (message) => {
             .setColor("#FF0000")
             .setTitle(`About ${client.user.username}`)
             .setThumbnail(client.user.avatarURL())
-            .setDescription(`My Prefix Here Is: \`${process.env.PREFIX}\`\nMy Devloper: **THE丶JUИGLΣΣ丶SHIVAMᵀˣ** \n \n You can play music by joining a voice channel and typing \`${process.env.PREFIX}play\`. Type \`${process.env.PREFIX}help\` To Get All Commands Help Menu.\n \n [Invite Me](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot) | [Support](https://discord.gg/Arqg9kc8r5)`)
+            .setDescription(`My Prefix Here Is: \`${process.env.PREFIX}\`\nMy Devloper: **THE丶JUИGLΣΣ丶SHIVAMᴵᴺˣ** \n \n You can play music by joining a voice channel and typing \`${process.env.PREFIX}play\`. Type \`${process.env.PREFIX}help\` To Get All Commands Help Menu.\n \n [Invite Me](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot) | [Support](https://discord.gg/Arqg9kc8r5)`)
             .setTimestamp();
             return message.channel.send(HELLO_SERVER);
         }
