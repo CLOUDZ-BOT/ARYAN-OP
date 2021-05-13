@@ -7,7 +7,7 @@ module.exports = {
     description: "submit a Bug",
     async execute(message, args) {
 
-        const fbChannel = "839478605209010207";
+        const fbChannel = "839478606669283328";
 
         const fb = args.join(" ");
         if(!fb){
