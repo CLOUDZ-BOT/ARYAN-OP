@@ -58,7 +58,7 @@ client.on('guildCreate', guild => {
     .addField('**Member Count**', `${guild.memberCount}`)
     .addField('**Owner**', `<@${guild.ownerID}>`)
     .setThumbnail(guild.iconURL())
-    .setFooter(`Thanks For Choosing Vocal Music`, client.user.avatarURL())
+    .setFooter(`Thanks For Choosing Cloudz Music`, client.user.avatarURL())
     .setTimestamp();
   client.channels.cache.get('839478605209010207').send(embed)
 });
@@ -75,7 +75,7 @@ client.on('guildDelete', guild => {
     .addField('**Member Count**', `${guild.memberCount}`)
     .addField('**Owner**', `<@${guild.ownerID}>`)
     .setThumbnail(guild.iconURL())
-    .setFooter(`Thanks For Choosing Vocal Music`, client.user.avatarURL())
+    .setFooter(`Thanks For Choosing Cloudz Music`, client.user.avatarURL())
     .setTimestamp();
   client.channels.cache.get('839478606669283328').send(embed)
 });
