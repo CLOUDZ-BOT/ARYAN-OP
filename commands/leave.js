@@ -1,33 +1,44 @@
-const { MessageEmbed } = require("discord.js");
-const sendError = require("../util/error");
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    info: {
-        name: "leave",
-        aliases: ["goaway", "disconnect"],
-        description: "Leave The Voice Channel!",
-        usage: "Leave",
-    },
-
-    run: async function (client, message, args) {
-        let channel = message.member.voice.channel;
-        if (!channel) return sendError("<a:astroz_error:839478585642713138> I'm sorry but you need to be in a voice channel!", message.channel);
-        if (!message.guild.me.voice.channel) return sendError("<a:astroz_error:839478585642713138>I Am Not In Any Voice Channel!", message.channel);
-
-        try {
-            await message.guild.me.voice.channel.leave();
-        } catch (error) {
-            await message.guild.me.voice.kick(message.guild.me.id);
-            return sendError("Trying To Leave The Voice Channel...", message.channel);
+    name: "disconnect",
+    aliases: ["dc", "disconnect", "nikal"],
+    description: "Leaves VC",
+    async execute(message, args) {
+        const { channel } = message.member.voice;
+    
+        if(!message.member.hasPermission('MOVE_MEMBERS')){
+          const noperms = new MessageEmbed()
+          .setDescription(':astroz_wrong: You Do Not Have Perms To Execute This Command! You Need `MOVE MEMBER` Perm To Execute This Command!')
+          .setColor("#FF0000");
+          return message.channel.send(noperms)
         }
+        const serverQueue = message.client.queue.get(message.guild.id);
 
-        const Embed = new MessageEmbed()
-            .setAuthor("Leave Voice Channel", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
-            .setColor("#ff0000")
-            .setTitle("Success")
-            .setDescription(" Left The Voice Channel.")
-            .setTimestamp();
+        const dcneedvc = new MessageEmbed()        
+        .setDescription(":astroz_wrong: You need to join a voice channel which i'm in - to disconnect me!")
+        .setColor("#FF0000");
 
-        return message.channel.send(Embed).catch(() => message.channel.send("Left The Voice Channel :C"));
-    },
-};
+        const dcembed = new MessageEmbed()
+        .setDescription(":astroz_correct: 24/7 mode is now **Disabled** in this server.")
+        .setColor("#FF0000")
+
+        
+        const dccembed = new MessageEmbed()
+        .setDescription(`You must be in the same channel as ${message.client.user}`)
+        .setColor("#FF0000")
+
+        if (!channel) return message.reply(dcneedvc).catch(console.error);
+        if (serverQueue && channel !== message.guild.me.voice.channel)
+          return message.reply(dccembed).catch(console.error);
+
+            message.member.voice.channel.leave();
+            message.channel.send(dcembed)       
+        return message.react(":astroz_correct:");
+           
+        }
+    }
+
+
+
+    console.log("DC / Disconnect working")
