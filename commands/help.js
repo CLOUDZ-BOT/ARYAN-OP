@@ -14,7 +14,7 @@ module.exports = {
         .setColor("#FF0000")
 				.setDescription("Hey my prefix in this server is **+**")
 				.addField("<a:Music:841963243676106752> __**Music Commands**__", "`play`, `skip`, `join`, `leave`, `volume`, `queue`, `np`, `stop`, `loop`, `pause`, `resume`, `lyrics`, `playlist`, `remove`, `shuffle`, `skipto`, `search`, `24/7`", false)
-				.addField("<a:alert:839493679030730764> __**Utility Commands**__", "`ping`, `invite`, `uptime`, `serverinfo`, `stats`, `feedback`, `bugreport`, `help`", false)
+				.addField("<a:alert:839493679030730764> __**Utility Commands**__", "`ping`, `invite`, `uptime`, `serverinfo`, `stats`, `help`", false)
         .setFooter(`To get info of each command you can do +help [command]`)
 				.addField("<a:BOT:839493686269182009> __**Developer Commands**__", "`eval`, `serverlist`, `setstatus`,", false)
 
