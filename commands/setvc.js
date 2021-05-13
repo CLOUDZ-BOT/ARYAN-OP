@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     info: {
-        name: "24/7",
+        name: "setvc",
         description: "Enables/Disables 24/7 of the bot in the server",
         usage: "",
         aliases: ["setvc", "247"]
@@ -31,7 +31,7 @@ module.exports = {
 
         const joinembed = new MessageEmbed()
 
-        .setDescription(`<a:astroz_success:839478588192718898> Sucessfully enabled the **24/7** . `)
+        .setDescription(`<a:astroz_success:839478588192718898> Sucessfully joined the vc and enabled the **24/7** . `)
         .setColor("#ff0000")
     
         message.channel.send(
