@@ -1,22 +1,22 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: "disconnect",
-    aliases: ["dc", "disconnect", "nikal"],
+    name: "leave",
+    aliases: ["dc", "disconnect", "chalaja bsdk"],
     description: "Leaves VC",
     async execute(message, args) {
         const { channel } = message.member.voice;
     
         if(!message.member.hasPermission('MOVE_MEMBERS')){
           const noperms = new MessageEmbed()
-          .setDescription(':astroz_wrong: You Do Not Have Perms To Execute This Command! You Need `MOVE MEMBER` Perm To Execute This Command!')
+          .setDescription('<a:astroz_error:839478585642713138> You Do Not Have Perms To Execute This Command! You Need `MOVE MEMBER` Perm To Execute This Command!')
           .setColor("#FF0000");
           return message.channel.send(noperms)
         }
         const serverQueue = message.client.queue.get(message.guild.id);
 
         const dcneedvc = new MessageEmbed()        
-        .setDescription(":astroz_wrong: You need to join a voice channel which i'm in - to disconnect me!")
+        .setDescription("<a:astroz_error:839478585642713138> You need to join a voice channel which i'm in - to disconnect me!")
         .setColor("#FF0000");
 
         const dcembed = new MessageEmbed()
