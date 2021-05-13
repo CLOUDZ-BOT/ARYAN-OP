@@ -19,7 +19,6 @@ if(!serverQueue.connection.dispatcher)return
      try{
       serverQueue.connection.dispatcher.end();
       } catch (error) {
-        message.guild.me.voice.channel.leave();
         message.client.queue.delete(message.guild.id);
         return sendError(`<a:astroz_success:839478588192718898> The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }
